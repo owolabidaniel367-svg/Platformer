@@ -4,7 +4,9 @@ const ctx = canvas.getContext("2d");
 
 
 const gravity = 0.3;
-const friction = 1;
+let friction
+const ground_friction = 1
+const air_friction = 0.4
 let acceleration = 0
 let accValue = 2
 let velocityY = 0;
@@ -197,7 +199,12 @@ function moveVertical() {
 
 
 function applyFriction() {
-   
+    if(grounded){
+        friction = ground_friction
+    }
+   else{
+    friction = air_friction
+   }
     if (velocityX > 0) {
 
         velocityX -= friction;
