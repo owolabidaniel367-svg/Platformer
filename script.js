@@ -1,19 +1,24 @@
 const canvas = document.getElementById("Gamecanvas");
 const ctx = canvas.getContext("2d");
 
-
-
+// THESE ARE VARIBLES YOU CAN TAMPER WITH
+// GRAVITY
 const gravity = 0.3;
 let friction
-const ground_friction = 1
-const air_friction = 0.4
+// GROUND FRICTION
+const ground_friction = 0.1
+// AIR FRICTION 
+const air_friction = 0.3 
 let acceleration = 0
-let accValue = 2
+// ACCELRATION 
+let accValue = 9
+// INITIAL VELOCITY VALUES
 let velocityY = 0;
 let velocityX = 0;
 let grounded = false
 let force;
-let maxVelocity = 14
+// MAXIMUM VELOCITY
+let maxVelocity = 17
 
 
 
